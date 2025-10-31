@@ -1,5 +1,5 @@
 <hr>
-<style align : center> Guess The Country Name Challenge
+<style>{text-align: center;} Guess The Country Name Challenge</style>
 <hr>
 Can you try it, did you have knowledge about it, then play it.
 <br><br>#include <stdio.h>
