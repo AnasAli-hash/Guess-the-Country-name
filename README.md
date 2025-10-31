@@ -1,8 +1,3 @@
-<style>
-  h1 {
-    text-align: center;
-  }
-</style>
 <hr>
 <h1>Guess The Country Name Challenge</h1>
 <hr>
