@@ -1,6 +1,6 @@
 <hr>
 Guess The Country Name Challenge
-<hr><br>
+<hr>
 Can you try it, did you have knowledge about it, then play it.
 <br><br>#include <stdio.h>
 <br>#include <stdlib.h>
