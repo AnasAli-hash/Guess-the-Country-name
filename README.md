@@ -1,5 +1,10 @@
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
 <hr>
-<h1><center>Guess The Country Name Challenge</center></h1>
+<h1>Guess The Country Name Challenge</h1>
 <hr>
 <h3>Can you try it, did you have knowledge about it, then play it.</h3>
 <br>#include <stdio.h>
