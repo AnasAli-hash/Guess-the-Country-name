@@ -1,7 +1,7 @@
 <hr>
-<center><h1>Guess The Country Name Challenge</h1></center>
+<h1><center>Guess The Country Name Challenge</center></h1>
 <hr>
-Can you try it, did you have knowledge about it, then play it.
+<h3>Can you try it, did you have knowledge about it, then play it.</h3>
 <br><br>#include <stdio.h>
 <br>#include <stdlib.h>
 <br>#include <string.h>
