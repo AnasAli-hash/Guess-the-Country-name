@@ -2,7 +2,7 @@
 <h1><center>Guess The Country Name Challenge</center></h1>
 <hr>
 <h3>Can you try it, did you have knowledge about it, then play it.</h3>
-<br><br>#include <stdio.h>
+<br>#include <stdio.h>
 <br>#include <stdlib.h>
 <br>#include <string.h>
 <br>#include <time.h>
