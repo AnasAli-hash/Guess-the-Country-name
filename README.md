@@ -1,13 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-#include <ctype.h>
-
+<hr>
+Guess The Country Name Challenge
+<hr><br><br>
+Can you try it, did you have knowledge about it, then play it.
+<br><br>#include <stdio.h>
+<br>#include <stdlib.h>
+<br>#include <string.h>
+<br>#include <time.h>
+<br>#include <ctype.h>
+<br>
 int main() {
-    // List of 50 country names (all lowercase)
-const char *countries[] = {
-"afghanistan","albania","algeria","andorra","angola","antiguaandbarbuda","argentina","armenia","australia","austria",
+<br>    // List of 195 country names (all lowercase)
+<br>const char *countries[] = {
+<br>"afghanistan","albania","algeria","andorra","angola","antiguaandbarbuda","argentina","armenia","australia","austria",
 "azerbaijan","bahamas","bahrain","bangladesh","barbados","belarus","belgium","belize","benin","bhutan",
 "bolivia","bosniaandherzegovina","botswana","brazil","brunei","bulgaria","burkinafaso","burundi","cambodia","cameroon",
 "canada","capeverde","centralafricanrepublic","chad","chile","china","colombia","comoros","congo","costarica",
@@ -27,72 +31,72 @@ const char *countries[] = {
 "thailand","togo","tonga","trinidadandtobago","tunisia","turkey","turkmenistan","tuvalu","uganda","ukraine",
 "unitedarabemirates","unitedkingdom","unitedstates","uruguay","uzbekistan","vanuatu","vaticancity","venezuela","vietnam","yemen","zambia","zimbabwe"
 };
-
+<br>
 
   int total = sizeof(countries) / sizeof(countries[0]);
-    
+<br>    
   srand(time(0));
-    const char *word = countries[rand() % total]; // Random country
-    int len = strlen(word);
-    char guess[100];
-    char used[26] = {0};
-    int attempts = 5; // Number of wrong tries allowed
-    char letter;
+<br>    const char *word = countries[rand() % total]; // Random country
+ <br>   int len = strlen(word);
+<br>    char guess[100];
+ <br>   char used[26] = {0};
+ <br>   int attempts = 5; // Number of wrong tries allowed
+<br>    char letter;
 
-   // Initialize guessed word with underscores
-    for (int i = 0; i < len; i++)
-        guess[i] = '_';
-    guess[len] = '\0';
+<br>   // Initialize guessed word with underscores
+<br>    for (int i = 0; i < len; i++)
+<br>        guess[i] = '_';
+<br>    guess[len] = '\0';
 
-   printf("🌍 Welcome to the Country Guess Game!\n");
-    printf("Try to guess one of 195 countries!\n");
-    printf("You have %d wrong attempts allowed.\n\n", attempts);
+<br>   printf("🌍 Welcome to the Country Guess Game!\n");
+<br>    printf("Try to guess one of 195 countries!\n");
+<br>    printf("You have %d wrong attempts allowed.\n\n", attempts);
 
-   while (attempts > 0) {
-        printf("Word: ");
-        for (int i = 0; i < len; i++)
-            printf("%c ", guess[i]);
+<br>   while (attempts > 0) {
+ <br>       printf("Word: ");
+<br>        for (int i = 0; i < len; i++)
+<br>            printf("%c ", guess[i]);
 
-  printf("\nUsed letters: ");
-        for (int i = 0; i < 26; i++)
-            if (used[i]) printf("%c ", i + 'a');
+<br>  printf("\nUsed letters: ");
+<br>        for (int i = 0; i < 26; i++)
+<br>            if (used[i]) printf("%c ", i + 'a');
 
-   printf("\nAttempts left: %d\n", attempts);
-        printf("Enter a letter: ");
-        scanf(" %c", &letter);
-        letter = tolower(letter);
+<br>   printf("\nAttempts left: %d\n", attempts);
+<br>        printf("Enter a letter: ");
+ <br>       scanf(" %c", &letter);
+<br>        letter = tolower(letter);
 
-  // Check if already used
-        if (used[letter - 'a']) {
-            printf("⚠️ You already used that letter!\n\n");
-            continue;
-        }
-        used[letter - 'a'] = 1;
+<br>  // Check if already used
+<br>        if (used[letter - 'a']) {
+<br>            printf("⚠️ You already used that letter!\n\n");
+<br>            continue;
+<br>        }
+<br>        used[letter - 'a'] = 1;
 
-  // Check if letter is in the word
-        int found = 0;
-        for (int i = 0; i < len; i++) {
-            if (word[i] == letter) {
-                guess[i] = letter;
-                found = 1;
-            }
-        }
+<br>  // Check if letter is in the word
+<br>        int found = 0;
+<br>        for (int i = 0; i < len; i++) {
+<br>            if (word[i] == letter) {
+ <br>               guess[i] = letter;
+<br>                found = 1;
+ <br>           }
+ <br>       }
 
-  if (!found) {
-            attempts--;
-            printf("❌ Wrong guess!\n\n");
-        } else {
-            printf("✅ Good guess!\n\n");
-        }
+<br>  if (!found) {
+<br>            attempts--;
+ <br>           printf("❌ Wrong guess!\n\n");
+ <br>       } else {
+<br>            printf("✅ Good guess!\n\n");
+<br>        }
 
-   // Check if player guessed all letters
-        if (strcmp(word, guess) == 0) {
-            printf("🎉 You guessed it! The country is **%s**.\n", word);
-            printf("Final Score: %d attempts remaining.\n", attempts);
-            return 0;
-        }
-    }
+<br>   // Check if player guessed all letters
+<br>        if (strcmp(word, guess) == 0) {
+<br>            printf("🎉 You guessed it! The country is **%s**.\n", word);
+<br>            printf("Final Score: %d attempts remaining.\n", attempts);
+<br>            return 0;
+<br>        }
+<br>    }
 
-   printf("💀 Out of attempts! The country was **%s**.\n", word);
+<br>   printf("💀 Out of attempts! The country was **%s**.\n", word);
     return 0;
 }
